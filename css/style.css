@@ -38,10 +38,10 @@ body {
 .table > tbody > tr > td {
     border: 0px;
     vertical-align: inherit;
-    filter: alpha(Opacity=20);
-    -moz-opacity: 0.2;
-    -khtml-opacity: 0.2;
-    opacity: 0.2;
+    /*filter: alpha(Opacity=20);*/
+    /*-moz-opacity: 0.2;*/
+    /*-khtml-opacity: 0.2;*/
+    /*opacity: 0.2;*/
 }
 
 .td1 {
@@ -56,7 +56,6 @@ body {
     -moz-opacity: 1;
     -khtml-opacity: 1;
     opacity: 1;
-    /*border: 1px solid #FFF;*/
 }
 
 .td3 {
@@ -86,12 +85,13 @@ body {
     color: white;
 }
 
-/*Star*/
-/*.demo-2 {*/
-/*//width: 60%;*/
-/*}*/
+/*Technology*/
+.lightStar {
+    opacity: 0;
+}
 #technology {
     background-image: url(../img/starybg.png);
+    position: relative;
 }
 #technology .mini {
     position:relative;
@@ -104,36 +104,7 @@ body {
     border-radius: 100px;
 
 }
-.star {
-    position:absolute;
-    top: 0;
-    left:0;
-    margin:auto;
-   // z-index: -1;
-    width: 100%;
-    height: 100%;
-    background-image: url(../img/earth_3.png);
-    background-size: cover;
-    background-position: center center;
-
-    webkit-animation-name: rotation;
-    -webkit-animation-duration: 50s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-name: rotation;
-    -moz-animation-duration: 50s;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: linear;
-    -o-animation-name: rotation;
-    -o-animation-duration: 50s;
-    -o-animation-iteration-count: infinite;
-    -o-animation-timing-function: linear;
-    animation-name: rotation;
-    animation-duration: 50s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in;///выбрать функцию
-}
-
+/*
 @-webkit-keyframes rotation {
     0% {-webkit-transform:rotate(0deg);
         -moz-transform:rotate(0deg);
@@ -173,7 +144,7 @@ body {
         -moz-transform:rotate(720deg);
         -o-transform:rotate(360deg);
         transform:rotate(360deg);}
-}
+}*/
 #demo2-canvas {
     margin-top:30px;
     border-radius: 200px;
@@ -182,7 +153,59 @@ body {
     background-size: cover;
     background-position: center center;
 }
+.technology-part{
+    position: absolute;
+    display: none;
+}
 
+.technology-part:nth-child(2){
+    top:81px;
+    left:170px;
+}
+.technology-part:nth-child(3){
+    top:115px;
+    left:345px;
+}
+.technology-part:nth-child(4){
+    top:162px;
+    left:404px;
+    z-index: 9999;
+}
+.active {
+    display: block;
+}
+#sphere{
+    background: radial-gradient(#55ddff, #111);
+    background-color: #02d8c6;
+    position:relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.star{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+
+}
+.star:first-child {
+    background-color: green;
+    z-index: 100;
+    top:130px;
+    left:10px;
+   
+}
+.star:nth-child(2){
+    top:15px;
+    left:130px;
+}
+.star:nth-child(3){
+    top:100px;
+    left:130px;
+}
 /* HEADER CONFIGURATION - CREATED BY CODROPS */
 .large-header {
     position: relative;
@@ -195,7 +218,7 @@ body {
 }
 
 .demo-1 .large-header {
-    background-image: url('../../img/demo-1-bg.jpg');
+    background-image: url('../img/demo-1-bg.jpg');
 }
 
 .logo {
@@ -216,7 +239,7 @@ body {
     color: #f9f1e9;
     text-align: center;
     top: 169px;
-    font-family: Open Sans Bold;
+   // font-family: Open Sans Bold;
     font-size: 60px;
 
 }
@@ -238,7 +261,7 @@ body {
 /*letter-spacing: 4px;*/
 /*}*/
 .main-title .thin {
-    font-family: Open Sans Light;
+   // font-family: Open Sans Light;
 }
 
 /*@media only screen and (max-width : 768px) {*/

@@ -12,32 +12,25 @@
         height = mini.offsetHeight;
         target = {x: width/2, y: height/2};
 
-        //mini.style.height = height+'px';
-        // var img1 = document.getElementById("img1");
-        // var pic = new Image();
-        // pic.src = "../img/1.png";
+
         canvas = document.getElementById('demo2-canvas');
-        // pic.onload = function () {
-        //     ctx.drawImage(pic, 0, 0);
-        // }
 
         canvas.width = width;
-        canvas.height = height;
+       canvas.height = height;
         ctx = canvas.getContext('2d');
 
         // create points
         points = [];
-        for(var x = 0; x < width; x = x + width/5) {
+        for(var x = 0; x < width; x = x + width/6) {
             for(var y = 0; y < height; y = y + height/5) {
-                var px = x + Math.random()*width/4;
-                var py = y + Math.random()*height/4;
+                var px = x + Math.random()*width/5;
+                var py = y + Math.random()*height/5;
                 px = Math.round(px);
                 py = Math.round(py);
                 var p = {x: px, originX: px, y: py, originY: py };
                 points.push(p);
             }
         }
-    console.log(points[0]);
         // for each point find the 5 closest points
         for(var i = 0; i < points.length; i++) {
             var closest = [];
@@ -46,7 +39,7 @@
                 var p2 = points[j]
                 if(!(p1 == p2)) {
                     var placed = false;
-                    for(var k = 0; k < 4; k++) {
+                    for(var k = 0; k < 3; k++) {
                         if(!placed) {
                             if(closest[k] == undefined) {
                                 closest[k] = p2;
@@ -188,7 +181,7 @@
 
     // Util
     function getDistance(p1, p2) {
-        return Math.pow(p1.x - p2.x, 4) + Math.pow(p1.y - p2.y, 4);
+        return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
     }
 
 })();

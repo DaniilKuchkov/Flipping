@@ -1,4 +1,4 @@
-(function() {
+/*(function() {
 
     var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
 
@@ -14,12 +14,10 @@
 
         largeHeader = document.getElementById('large-header');
         largeHeader.style.height = height+'px';
-
-        canvas = document.getElementById('demo-canvas');
+        canvas = document.getElementById('demo-canvas'); 
         canvas.width = width;
         canvas.height = height;
         ctx = canvas.getContext('2d');
-
         // create points
         points = [];
         for(var x = 0; x < width; x = x + width/20) {
@@ -30,7 +28,7 @@
                 points.push(p);
             }
         }
-
+        console.log(points);
         // for each point find the 5 closest points
         for(var i = 0; i < points.length; i++) {
             var closest = [];
@@ -153,7 +151,7 @@
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p.closest[i].x, p.closest[i].y);
-            ctx.strokeStyle = 'rgba(255,255,255,'+ p.active+')';
+            ctx.strokeStyle = 'rgba(33,194,192,'+ p.active+')';
             ctx.stroke();
         }
     }
@@ -172,7 +170,11 @@
             if(!_this.active) return;
             ctx.beginPath();
             ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
-            ctx.fillStyle = 'rgba(255,255,255, '+ _this.active+')';
+            ctx.fillStyle = 'rgba(33,194,192, '+ _this.active+')';
+            // ctx.shadowColor =  'rgb(33,194,192)';
+            // ctx.shadowOffsetX = 5;
+            // ctx.shadowOffsetY = 5;
+            // ctx.shadowBlur = 20;
             ctx.fill();
         };
     }
@@ -182,4 +184,114 @@
         return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
     }
 
-})();
+})();*/
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 400,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#02d8c6"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "blue"
+      },
+      "polygon": {
+        "nb_sides": 10
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 4,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 3,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 100,
+      "color": "#02d8c6",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 2,
+      "direction": "none",
+      "random": true,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": true,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "bubble"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 30,
+        "size": 10,
+        "duration": 2,
+        "opacity": 0.5,
+        "speed": 0.5
+      },
+      "repulse": {
+        "distance": 70,
+        "duration": 10
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
