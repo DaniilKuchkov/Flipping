@@ -5,5 +5,6 @@ sphere.addEventListener('mouseover',function(e){
 		var target = e.target;
 		if(target.className == 'star'){
 			tech[+target.dataset.num].classList.add('active');
-		}else tech[+target.dataset.num].classList.remove('active')
+			setTimeout(function(){tech[+target.dataset.num].classList.remove('active')},1000);
+		}
 });
