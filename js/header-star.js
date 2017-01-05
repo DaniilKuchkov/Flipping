@@ -245,7 +245,7 @@ particlesJS("particles-js", {
       "direction": "none",
       "random": true,
       "straight": false,
-      "out_mode": "out",
+      "out_mode": "bounce",
       "bounce": true,
       "attract": {
         "enable": false,
@@ -275,7 +275,7 @@ particlesJS("particles-js", {
         }
       },
       "bubble": {
-        "distance": 30,
+        "distance": 100,
         "size": 10,
         "duration": 2,
         "opacity": 0.5,
