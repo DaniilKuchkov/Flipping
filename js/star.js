@@ -1,9 +1,10 @@
 var sphere = document.getElementById('sphere');
 var stars = document.getElementsByClassName('star');
 var tech = document.getElementsByClassName('technology-part');
+
 sphere.addEventListener('mouseover',function(e){
 		var target = e.target;
-		if(target.className == 'star'){
+		if(target.className == 'star' && target.dataset.num != 'all'){
 			target.style.transform = 'scale(1.7)';
 			target.style.boxShadow = '0px 0px 21px 20px rgba(0,235,252,1);';
 			tech[+target.dataset.num].classList.add('active');
@@ -12,30 +13,25 @@ sphere.addEventListener('mouseover',function(e){
 				target.style.transform = 'scale(1.0)';
 			},1000);
 		}
+		if(target.dataset.num == 'all') {
+			for(var i = 0; i < tech.length;i++){
+				tech[i].classList.add('active');
+				setTimeout(function(){
+					console.log(tech[i]);
+					tech[i].classList.remove('active');
+				},4000);
+			}
+		};
 });
-	var star = document.createElement('div');
-	star.setAttribute('class','star');
-var starArr = new Array(14);
-var n = 0;
-for(var i = 0 ; i < starArr.length;i++){
-	starArr[i] = star;
-	starArr[i].dataset.num = n;
-	console.log(starArr[i]);
-}
-var canvas = document.getElementById('stuff');
-var context = canvas.getContext('2d');
-function randomVal(val){
-	return Math.floor(Math.random()*val);
-}
+var num = 14;
+var wrap = 300;
+var radius = 290;
 
-function drawCircle(x,y,r){
-	  context.beginPath();
-      context.arc(x, y, r, 0, 2 * Math.PI, false);
-      context.fillStyle = 'green';
-      context.fill();
-}
-for(var i = 0; i<14;i++){
-	drawCircle(randomVal(canvas.width),randomVal(canvas.height),2);
-}
-      
-  
+$(document).ready(function() {
+  for (i=0;i<num; i++){
+    var f = 2 / num * i * Math.PI;
+    var left = wrap + radius * Math.sin(f) + 'px';
+    var top = wrap + radius * Math.cos(f) + 'px';
+    $('.technology-part').eq(i).css({'top':top,'left':left});
+    }
+});

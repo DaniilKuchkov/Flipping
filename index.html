@@ -13,8 +13,7 @@
 </head>
 <body>
 <!-- ********** HEADER ********** -->
-<header>
-
+        <header>
             <div id="particles-js"></div>
             <div class="logo"><img src="img/logo.png" alt="#"></div>
             <h1 class="header-title">Serf<span class="thin">Artificial Intelegence</span></h1>
@@ -22,12 +21,13 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>
                 Fusce vel dictumarcu. Praesent et maximus libero.<br/>
                 Lorem ipsum dolor sit amet,consectetur adipiscing elit<br><br>
-                <button class="btn btn-conf btn-theme">Learn More</button>
+            <button class="btn btn-conf btn-theme">Learn More</button>
             </p>
-</header>
+            <div class="arrow"><img src="img/arrow.png" alt="arrow"></div>         
+        </header>
 <!--/header-->
 <section id="about">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <h3>What is SERF</h3>
             <div class="col-md-4 col-md-offset-1">
@@ -45,23 +45,10 @@
 </section>
 <section id="technology">
     <div class="container">
-        <h3>Technology</h3>
+        <h3>Technology</h3> 
         <div id="galaxy">
-            <div class="technology-part"><span>Speech to speech <br> Translation</span></div>
-            <div class="technology-part"><span>Deap learning <br> Machine Learning <br> (Platforms)</span></div>
-            <div class="technology-part"><span>Gesture <br> Control</span></div>
-            <div class="technology-part"><span>Virtual Assistans</span></div>
-            <div class="technology-part"><span>NPL <br> Text mining</span></div>
-            <div class="technology-part"><span>Natural Language <br> Processing</span></div>
-            <div class="technology-part"><span>Personalized <br> Recomendation <br> Engines</span></div>
-            <div class="technology-part"><span>Speech Recognition</span></div>
-            <div class="technology-part"><span>Video Automatic <br> Content Recognition</span></div>
-            <div class="technology-part"><span>Smart Robots</span></div>
-            <div class="technology-part"><span>Deap learning <br> Machine Learning <br> (Applications)</span></div>
-            <div class="technology-part"><span>Context Aware <br> Computing</span></div>
-            <div class="technology-part"><span>Computer Vision <br> Image Recognition <br> (Platforms)</span></div>
-            <div class="technology-part"><span>Computer Vision <br> Image Recognition <br> (Applications)</span></div>
             <div id="sphere">
+            <div id="staff"></div>
                 <div data-num ="0" class="star"></div>
                 <div data-num ="1" class="star"></div>
                 <div data-num ="2" class="star"></div>
@@ -76,44 +63,46 @@
                 <div data-num ="11" class="star"></div>
                 <div data-num ="12" class="star"></div>
                 <div data-num ="13" class="star"></div>
+                <div data-num ="all" class="star"></div>
+            </div>
+            <div id="tech-cont">
+            <div class="technology-part"><span>Speech to speech <br> Translation</span></div>
+            <div class="technology-part"><span>Smart Robots</span></div>
+            <div class="technology-part"><span>Deap learning <br> Machine Learning <br> (Platforms)</span></div>
+            <div class="technology-part"><span>Deap learning <br> Machine Learning <br> (Applications)</span></div>
+            <div class="technology-part"><span>NPL <br> Text mining</span></div>
+            <div class="technology-part"><span>Natural Language <br> Processing</span></div>
+            <div class="technology-part"><span>Personalized <br> Recomendation <br> Engines</span></div>
+            <div class="technology-part"><span>Speech Recognition</span></div>
+            <div class="technology-part"><span>Video Automatic <br> Content Recognition</span></div>
+            <div class="technology-part"><span>Gesture <br> Control</span></div>
+            <div class="technology-part"><span>Computer Vision <br> Image Recognition <br> (Platforms)</span></div>
+            <div class="technology-part"><span>Context Aware <br> Computing</span></div>
+            <div class="technology-part"><span>Computer Vision <br> Image Recognition <br> (Applications)</span></div>
+            <div class="technology-part"><span>Virtual Assistans</span></div>
             </div>
         </div>  
     </div>
 </section>
 <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
             <div class="message"><img src="#" alt="message"></div>
             <h1>We improve how people communicate.</h1>
-            <p class="video" ><a href="#">Watch the video</a></p>
- 
+            <p class="video" ><a href="#">Watch the video > </a></p>
             <div class="article">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-2">
-                        <img src="#" alt="logo">
-                    </div>
-                    <div class="col-xs-8">
-                        <h4>Why is started "communication intelligence" company</h4>
-                        <p>Guy Suber - Founder, National AI</p>
-                    </div>
-                    <div class="col-xs-2">
-                        <button>READ THE ARTICLE</button>
-                    </div>
-                </div>
+                <img src="img/logo-footer.png" alt="logo">
+                <h4>Why is started "communication intelligence" company
+                <br>
+                <br>
+                <span>Guy Suber - Founder, National AI</span></h4>
+                <button>READ THE ARTICLE</button>
             </div>
-
+            <div class="social-networks">
+                <a href=""><img src="img/twitter_bird.png" alt="twiter"></a>
+                <a href=""><img src="img/facebook.png" alt="facebook"></a>
             </div>
-            <p><a href="#"></a></p>
-            <a href=""><img src="#" alt="twiter"></a>
-            <a href=""><img src="#" alt="facebook"></a>
-        </div>
-        </div>
-    </div>
 </footer>
-<canvas width="300" height="300" id="stuff"></canvas>
 <script scr='js/jquery.min.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/particles.js"></script>
 <script src="js/star.js"></script>
